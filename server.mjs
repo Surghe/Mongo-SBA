@@ -1,7 +1,7 @@
 // Imports 
 import express from 'express';
 import dotenv from 'dotenv';
-
+import connectDB from './db/conn.mjs';
 
 // Setups
 dotenv.config();
@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3001;
 
 // Midware
 app.use(express.json());
+connectDB();
+
 
 // Routes
 

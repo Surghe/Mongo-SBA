@@ -2,6 +2,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
+import carRoutes from './routes/carRoutes.mjs';
 
 // Setups
 dotenv.config();
@@ -14,6 +15,8 @@ connectDB();
 
 
 // Routes
+
+app.use('/api/car', carRoutes)
 
 // Errware
 
